@@ -1,0 +1,26 @@
+.navbar {
+    background-color: rgb(29, 45, 77);
+    .navbar-collapse {
+        .nav-pills {
+            .nav-item {
+                min-width: 100px;
+                padding-left: 5px;
+                padding-right: 5px;
+                .nav-link {
+                    color: floralwhite;
+                    text-decoration: none;
+                    
+                    &:hover {
+                        color: rgb(29, 45, 77);
+                        background-color: rgb(221, 218, 211);
+                    }
+
+                    &.active {
+                        color: rgb(21, 29, 44);
+                        background-color: floralwhite;
+                    }
+                }
+            }
+        }
+    }
+}
