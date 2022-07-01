@@ -1,0 +1,30 @@
+@use "./colors" as colors;
+
+.bg-dark {
+    background-color: colors.$gunmetal;
+    * {
+        color: inherit;
+    }
+}
+
+.bg-light {
+    background-color: colors.$light-gray;
+    * {
+        color: inherit;
+    }
+}
+
+.text-dark {
+    color: colors.$gunmetal;
+    * {
+        background-color: inherit;
+    }
+  
+}
+
+.text-light {
+    color: colors.$light-gray;
+    * {
+        background-color: inherit;
+    }
+}

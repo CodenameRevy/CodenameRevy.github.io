@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.bg-dark {
+  background-color: rgb(42, 45, 52);
+}
+.bg-dark * {
+  color: inherit;
+}
+
+.bg-light {
+  background-color: rgb(210, 212, 219);
+}
+.bg-light * {
+  color: inherit;
+}
+
+.text-dark {
+  color: rgb(42, 45, 52);
+}
+.text-dark * {
+  background-color: inherit;
+}
+
+.text-light {
+  color: rgb(210, 212, 219);
+}
+.text-light * {
+  background-color: inherit;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+nav ul li {
+  display: inline-flex;
+}
+nav ul li .nav-link {
+  display: block;
+  padding: 16px 16px;
+}
+
+a {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  text-decoration: none;
+}/*# sourceMappingURL=default.css.map */
