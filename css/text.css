@@ -68,3 +68,13 @@
         font-weight: normal;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .name-title {
+        font-size: 3rem;
+    }
+
+    .expertise-title {
+        font-size: 1rem;
+    }
+}
