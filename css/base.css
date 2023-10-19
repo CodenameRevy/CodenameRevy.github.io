@@ -70,6 +70,8 @@ a {
     font-family: 'Jetbrains Mono';
     text-decoration: none;
     color: var(--deep-green);
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .container a:hover, .article a:hover {
