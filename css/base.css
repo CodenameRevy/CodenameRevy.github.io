@@ -10,7 +10,6 @@
     --dark-green: #003B00;
     --gray-black: #221f21;
 
-    display: flex;
     background-color: var(--gray-black);
     margin-top: 8rem;
     scroll-behavior: smooth;
@@ -26,8 +25,6 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
     padding-top: 15rem;
     margin-left: 8rem;
     margin-bottom: 4rem;
@@ -55,11 +52,13 @@ body {
 }
 
 .badges {
+    gap: 25px;
     color: var(--deep-green);
     font-size: 2rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    text-wrap: balance;
+}
+
+.badges i {
+    width: 2.5%;
 }
 
 .badges i:hover {
