@@ -6,12 +6,12 @@
 :root {
     /*Matrix colors*/
     --malachite: #00FF41;
-    --islamic-green: #008F11;
+    --deep-green: #008F08;
     --dark-green: #003B00;
-    --vampire-black: #221f21;
+    --gray-black: #221f21;
 
     display: flex;
-    background-color: var(--vampire-black);
+    background-color: var(--gray-black);
     margin-top: 8rem;
     scroll-behavior: smooth;
 }
@@ -48,40 +48,14 @@ body {
 }
 
 .article p {
+    display: inline-block;
+    overflow: hidden;
     text-align: center;
     font-size: 1rem;
 }
 
-.title {
-    color: var(--malachite);
-    font-family: 'Jetbrains Mono';
-    font-size: 2rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-.name-title {
-    color: var(--malachite);
-    font-family: 'Jetbrains Mono';
-    font-size: 5rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-.name-title:hover {
-    animation: glitch 1.5s steps(1, end) infinite;
-}
-
-.expertise-title {
-    color: var(--islamic-green);
-    font-family: 'Jetbrains Mono';
-    font-size: 3rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
 .badges {
-    color: var(--islamic-green);
+    color: var(--deep-green);
     font-size: 2rem;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -95,21 +69,21 @@ body {
 a {
     font-family: 'Jetbrains Mono';
     text-decoration: none;
-    color: var(--islamic-green);
+    color: var(--deep-green);
 }
 
 .container a:hover, .article a:hover {
-    color: var(--vampire-black);
+    color: var(--gray-black);
     background-color: var(--malachite);
 }
 
 .contact-email, .contact-linkedin {
     font-family: 'Jetbrains Mono';
-    color: var(--islamic-green);
+    color: var(--deep-green);
 }
 
 ::selection {
-    color: var(--vampire-black);
+    color: var(--gray-black);
     background-color: var(--malachite);
 }
 
@@ -117,7 +91,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: var(--vampire-black);
+    background-color: var(--gray-black);
     color: var(--malachite);
     font-family: 'Jetbrains Mono';
 }
@@ -129,47 +103,4 @@ a {
     margin: 2rem;
     justify-content: center;
     align-items: center;
-}
-
-@keyframes glitch {
-    0% {
-        text-transform: none;
-        text-decoration: none;
-    }
-    70% {
-        text-decoration: line-through;
-        font-weight: 100;
-    }
-    75% {
-        text-decoration: underline;
-        font-style: italic;
-    }
-    80% {
-        text-transform: uppercase;
-        text-decoration: line-through;
-        font-weight: 900;
-    }
-    85% {
-        text-transform: lowercase;
-        text-decoration: overline;
-        font-weight: 300;
-        font-style: normal;
-    }
-    90% {
-        text-transform: capitalize;
-        text-decoration: underline dotted;
-        font-weight: 600;
-    }
-    95% {
-        text-transform: uppercase;
-        text-decoration: line-through dashed;
-        font-style: italic;
-        font-weight: 200;
-    }
-    100% {
-        text-transform: none;
-        text-decoration: none;
-        font-style: normal;
-        font-weight: normal;
-    }
 }
