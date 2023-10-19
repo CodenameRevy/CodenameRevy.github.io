@@ -8,7 +8,7 @@
     --malachite: #00FF41;
     --islamic-green: #008F11;
     --dark-green: #003B00;
-    --vampire-black: #0D0208;
+    --vampire-black: #221f21;
 
     display: flex;
     background-color: var(--vampire-black);
