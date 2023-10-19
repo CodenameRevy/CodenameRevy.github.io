@@ -1,4 +1,4 @@
-const spyScroll = () => {
+const scrollSpy = () => {
     const sections = document.querySelectorAll('.section');
 
     window.onscroll = () => {
@@ -24,4 +24,4 @@ const scrollToAnchor = (anchor) => {
     document.querySelector(anchor).scrollIntoView();
 }
 
-spyScroll();
+scrollSpy();
