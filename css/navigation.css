@@ -24,8 +24,6 @@
 
 .navigation-bar .navigation-links .navigation-link {
     display: flex;
-    margin: 1rem 1rem 1rem 1rem;
-    padding: 1rem 1rem 1rem 1rem;
 }
 
 .navigation-bar .navigation-links .navigation-link a {
@@ -33,12 +31,47 @@
     text-transform: uppercase;
     font-family: 'Jetbrains Mono';
     color: var(--malachite);
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.navigation-bar .navigation-links .navigation-link.selected a::after {
+    content: ' ';
+    width: 8px;
+    height: 2px;
+    border: 1px;
+    border-style: solid;
+    border-color: var(--vampire-black);
+    background-color: var(--vampire-black);
+    opacity: 0;
+    display: inline-block;
+    animation: blink 0.5s steps(1, end) infinite alternate;
 }
 
 .navigation-bar .navigation-links .navigation-link.selected {
     background-color: var(--islamic-green);
 }
 
+.navigation-bar .navigation-links .navigation-link:hover {
+    background-color: var(--malachite);
+}
+
+.navigation-bar .navigation-links .navigation-link:hover a {
+    color: var(--vampire-black);
+}
+
+.navigation-bar .navigation-links .navigation-link.selected:hover {
+    background-color: var(--malachite);
+}
+
 .navigation-bar .navigation-links .navigation-link.selected a {
     color: var(--vampire-black);
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

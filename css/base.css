@@ -10,8 +10,15 @@
     --dark-green: #003B00;
     --vampire-black: #0D0208;
 
+    display: flex;
     background-color: var(--vampire-black);
     margin-top: 8rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 .breakpoint {
@@ -28,18 +35,27 @@
 
 .article {
     display: flex;
+    width: 80%;
+    place-self: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding-top: 8rem;
     margin-top: 25rem;
     margin-bottom: 50rem;
+    color: var(--malachite);
+    font-family: 'Jetbrains Mono';
+}
+
+.article p {
+    text-align: center;
+    font-size: 1rem;
 }
 
 .title {
     color: var(--malachite);
     font-family: 'Jetbrains Mono';
-    font-size: 2vw;
+    font-size: 2rem;
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -47,39 +63,49 @@
 .name-title {
     color: var(--malachite);
     font-family: 'Jetbrains Mono';
-    font-size: 5vw;
+    font-size: 5rem;
     margin-block-start: 0;
     margin-block-end: 0;
+}
+
+.name-title:hover {
+    animation: glitch 1.5s steps(1, end) infinite;
 }
 
 .expertise-title {
     color: var(--islamic-green);
     font-family: 'Jetbrains Mono';
-    font-size: 3vw;
+    font-size: 3rem;
     margin-block-start: 0;
     margin-block-end: 0;
 }
 
 .badges {
     color: var(--islamic-green);
-    font-size: 2vw;
+    font-size: 2rem;
     margin-block-start: 0;
     margin-block-end: 0;
     text-wrap: balance;
 }
 
-.contact-email, .contact-linkedin {
-    font-family: 'Jetbrains Mono';
-    color: var(--islamic-green);
+.badges i:hover {
+    color: var(--malachite);
 }
 
-.contact-email .email-link, .contact-linkedin .linkedin-link {
+a {
+    font-family: 'Jetbrains Mono';
     text-decoration: none;
     color: var(--islamic-green);
 }
-.contact-email .email-link:hover, .contact-linkedin .linkedin-link:hover {
+
+.container a:hover, .article a:hover {
     color: var(--vampire-black);
     background-color: var(--malachite);
+}
+
+.contact-email, .contact-linkedin {
+    font-family: 'Jetbrains Mono';
+    color: var(--islamic-green);
 }
 
 ::selection {
@@ -103,4 +129,47 @@
     margin: 2rem;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes glitch {
+    0% {
+        text-transform: none;
+        text-decoration: none;
+    }
+    70% {
+        text-decoration: line-through;
+        font-weight: 100;
+    }
+    75% {
+        text-decoration: underline;
+        font-style: italic;
+    }
+    80% {
+        text-transform: uppercase;
+        text-decoration: line-through;
+        font-weight: 900;
+    }
+    85% {
+        text-transform: lowercase;
+        text-decoration: overline;
+        font-weight: 300;
+        font-style: normal;
+    }
+    90% {
+        text-transform: capitalize;
+        text-decoration: underline dotted;
+        font-weight: 600;
+    }
+    95% {
+        text-transform: uppercase;
+        text-decoration: line-through dashed;
+        font-style: italic;
+        font-weight: 200;
+    }
+    100% {
+        text-transform: none;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: normal;
+    }
 }
