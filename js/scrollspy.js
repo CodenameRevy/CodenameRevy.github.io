@@ -20,4 +20,8 @@ const spyScroll = () => {
     }
 }
 
+const scrollToAnchor = (anchor) => {
+    document.querySelector(anchor).scrollIntoView();
+}
+
 spyScroll();
