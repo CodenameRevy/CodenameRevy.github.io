@@ -11,7 +11,7 @@ const spyScroll = () => {
                 if (selected !== null) {
                     selected.classList.remove('selected');
                 }
-                var next = document.querySelector(`a[href*="${id}"]`);
+                var next = document.querySelector(`a[onclick*="scrollToAnchor('#${id}')"]`);
                 if (next !== null) {
                     next.parentNode.classList.add('selected');
                 }

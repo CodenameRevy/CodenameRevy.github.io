@@ -31,7 +31,8 @@
     text-transform: uppercase;
     font-family: 'Jetbrains Mono';
     color: var(--malachite);
-    padding: 1rem 1rem 1rem 1rem;
+    width: 100%;
+    padding: 1rem 2rem 1rem 2rem;
 }
 
 .navigation-bar .navigation-links .navigation-link.selected a::after {
