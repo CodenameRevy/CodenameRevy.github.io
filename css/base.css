@@ -1,10 +1,4 @@
-@font-face {
-    font-family: "Jetbrains Mono";
-    src: 
-        url(../../fonts/Jetbrains_Mono/JetbrainsMono-VariableFont_wght.ttf),
-        url(../fonts/Jetbrains_Mono/JetbrainsMono-VariableFont_wght.ttf),
-        url(./fonts/Jetbrains_Mono/JetbrainsMono-VariableFont_wght.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 :root {
     /*Matrix colors*/
@@ -43,7 +37,7 @@ body {
     margin-top: 15rem;
     margin-bottom: 15rem;
     color: var(--malachite);
-    font-family: 'Jetbrains Mono';
+    font-family: 'Jetbrains Mono', monospace;
 }
 
 .article p {
@@ -68,7 +62,7 @@ body {
 }
 
 a {
-    font-family: 'Jetbrains Mono';
+    font-family: 'Jetbrains Mono', monospace;
     text-decoration: none;
     color: var(--deep-green);
     padding-left: 5px;
@@ -81,7 +75,7 @@ a {
 }
 
 .contact-email, .contact-linkedin {
-    font-family: 'Jetbrains Mono';
+    font-family: 'Jetbrains Mono', monospace;
     color: var(--deep-green);
 }
 
@@ -96,7 +90,7 @@ a {
     justify-content: center;
     background-color: var(--gray-black);
     color: var(--malachite);
-    font-family: 'Jetbrains Mono';
+    font-family: 'Jetbrains Mono', monospace;
 }
 
 .footer .container {

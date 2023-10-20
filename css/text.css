@@ -1,6 +1,6 @@
 .title {
     color: var(--malachite);
-    font-family: 'Jetbrains Mono';
+    font-family: 'Jetbrains Mono', monospace;
     font-size: 2rem;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -8,7 +8,7 @@
 
 .name-title {
     color: var(--malachite);
-    font-family: 'Jetbrains Mono';
+    font-family: 'Jetbrains Mono', monospace;
     font-size: 5rem;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -16,7 +16,7 @@
 
 .expertise-title {
     color: var(--deep-green);
-    font-family: 'Jetbrains Mono';
+    font-family: 'Jetbrains Mono', monospace;
     font-size: 3rem;
     margin-block-start: 0;
     margin-block-end: 1rem;
