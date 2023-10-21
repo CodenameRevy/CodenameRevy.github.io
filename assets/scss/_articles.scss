@@ -1,0 +1,71 @@
+@use 'sass:map';
+
+@use 'media';
+@use 'colors';
+
+.article {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    place-self: center;
+    place-content: center;
+    align-items: center;
+    margin: {
+        top: 8rem;
+        bottom: 19.5rem;
+    }
+    padding: {
+        top: 8rem;
+    }
+
+    p {
+        display: inline-block;
+        overflow: hidden;
+        text-align: center;
+        font-size: 1rem;
+    }
+}
+
+.container {
+    margin: {
+        left: 8rem;
+        bottom: 8rem;
+    }
+    padding: {
+        top: 25rem;
+    }
+
+
+}
+
+.contact {
+    &-email, &-linkedin {
+        color: colors.$deepGreen;
+    }
+}
+
+@include media.media(map.get(media.$breakpoints, "small")) {
+    .container {
+        margin: {
+            left: 4rem;
+            bottom: 8rem;
+        }
+        
+        padding: {
+            top: 18rem;
+        }
+    }
+}
+
+@include media.media(map.get(media.$breakpoints, "medium")) {
+    .container {
+        margin: {
+            left: 2rem;
+            bottom: 8rem;
+        }
+        
+        padding: {
+            top: 18rem;
+        }
+    }
+}

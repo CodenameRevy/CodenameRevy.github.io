@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+@keyframes blinkingCursor {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes glitch {
+  0% {
+    text-transform: none;
+    text-decoration: none;
+  }
+  70% {
+    text-decoration: line-through;
+    font-weight: 100;
+  }
+  75% {
+    text-decoration: underline;
+    font-style: italic;
+  }
+  80% {
+    text-transform: uppercase;
+    text-decoration: line-through;
+    font-weight: 900;
+  }
+  85% {
+    text-transform: lowercase;
+    text-decoration: overline;
+    font-weight: 300;
+    font-style: normal;
+  }
+  90% {
+    text-transform: capitalize;
+    text-decoration: underline dotted;
+    font-weight: 600;
+  }
+  95% {
+    text-transform: uppercase;
+    text-decoration: line-through dashed;
+    font-style: italic;
+    font-weight: 200;
+  }
+  100% {
+    text-transform: none;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+.matrix:hover {
+  animation: glitch 1.5s steps(1, end) infinite;
+}
+
+.navigation-bar {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  place-self: center;
+  place-content: center;
+  align-items: center;
+  width: 100%;
+}
+.navigation-bar .navigation-links {
+  display: flex;
+  list-style-type: none;
+  place-content: center;
+  align-items: center;
+  text-align: center;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  margin-inline-start: 1rem;
+  margin-inline-end: 1rem;
+  background-color: #221f21;
+}
+.navigation-bar .navigation-links .navigation-link {
+  display: flex;
+}
+.navigation-bar .navigation-links .navigation-link a {
+  color: #00FF41;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+}
+.navigation-bar .navigation-links .navigation-link a::after {
+  display: inline-block;
+  content: " ";
+  width: 8px;
+  height: 2px;
+  border-top: 1px;
+  border-right: 1px;
+  border-bottom: 1px;
+  border-right: 1px;
+  border-style: solid;
+  border-color: #221f21;
+  background-color: #221f21;
+  opacity: 0;
+  animation: blinkingCursor 0.5s steps(1, end) infinite;
+}
+.navigation-bar .navigation-links .navigation-link.selected {
+  background-color: #008F08;
+}
+.navigation-bar .navigation-links .navigation-link.selected:hover {
+  background-color: #00FF41;
+}
+.navigation-bar .navigation-links .navigation-link.selected a {
+  color: #221f21;
+}
+.navigation-bar .navigation-links .navigation-link:hover {
+  background-color: #00FF41;
+}
+.navigation-bar .navigation-links .navigation-link:hover a {
+  color: #221f21;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-bar {
+    display: none;
+  }
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  place-self: center;
+  place-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  margin-bottom: 19.5rem;
+  padding-top: 8rem;
+}
+.article p {
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.container {
+  margin-left: 8rem;
+  margin-bottom: 8rem;
+  padding-top: 25rem;
+}
+
+.contact-email, .contact-linkedin {
+  color: #008F08;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 4rem;
+    margin-bottom: 8rem;
+    padding-top: 18rem;
+  }
+}
+@media screen and (max-width: 1124px) {
+  .container {
+    margin-left: 2rem;
+    margin-bottom: 8rem;
+    padding-top: 18rem;
+  }
+}
+.badges {
+  color: #008F08;
+  font-size: 2rem;
+}
+.badges i {
+  width: 2.5%;
+}
+.badges i:hover {
+  color: #00FF41;
+}
+
+@media screen and (max-width: 768px) {
+  .badges {
+    text-wrap: balance;
+  }
+}
+.card-social {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  width: 33.3%;
+  place-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card-icon {
+  font-size: 15rem;
+}
+.card-title {
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+.card-button {
+  width: 100%;
+  border-top: 1px;
+  border-right: 1px;
+  border-bottom: 1px;
+  border-left: 1px;
+  border-style: solid;
+  border-color: #00FF41;
+  color: #00FF41;
+  width: 100%;
+  padding-top: 15px;
+  padding-right: 75px;
+  padding-bottom: 15px;
+  padding-left: 75px;
+}
+
+@media screen and (max-width: 768px) {
+  .card-icon {
+    font-size: 4rem;
+  }
+  .card-social {
+    width: 100%;
+  }
+  .card-button {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+@media screen and (max-width: 1124px) {
+  .card-social {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .card-icon {
+    font-size: 8rem;
+  }
+  .card-button {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .card-button {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.title {
+  color: #00FF41;
+  font-size: 2rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.name-title {
+  color: #00FF41;
+  font-size: 5rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.expertise-title {
+  color: #008F08;
+  font-size: 3rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .name-title {
+    font-size: 3rem;
+  }
+  .expertise-title {
+    font-size: 2rem;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  place-self: center;
+  place-content: center;
+  width: 100%;
+}
+.footer .container {
+  display: inherit;
+  width: 50%;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  margin-left: 0rem;
+  margin-bottom: 0rem;
+  padding-top: 13.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer .container {
+    width: 100%;
+    padding-top: 0rem;
+    margin-top: 0rem;
+  }
+}
+:root {
+  font-family: "Jetbrains Mono", monospace;
+  background-color: #221f21;
+  color: #00FF41;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #008F08;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+a:hover {
+  color: #221f21;
+  background-color: #00FF41;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  place-self: center;
+  place-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}/*# sourceMappingURL=base.css.map */

@@ -1,0 +1,53 @@
+@use 'sass:map';
+
+@use 'media';
+@use 'colors';
+
+$marginBlock: ( start: 0, end: 0 );
+
+.title {
+    color: colors.$malachite;
+    font: {
+        size: 2rem;
+    }
+    margin-block: {
+        start: map.get($marginBlock, "start");
+        end: map.get($marginBlock, "end");
+    };
+}
+
+.name-title {
+    color: colors.$malachite;
+    font: {
+        size: 5rem;
+    }
+    margin-block: {
+        start: map.get($marginBlock, "start");
+        end: map.get($marginBlock, "end");
+    };
+}
+
+.expertise-title {
+    color: colors.$deepGreen;
+    font: {
+        size: 3rem;
+    }
+    margin-block: {
+        start: map.get($marginBlock, "start");
+        end: map.get($marginBlock, "end");
+    };
+}
+
+@include media.media(map.get(media.$breakpoints, "small")) {
+    .name-title {
+        font: {
+            size: 3rem;
+        }
+    }
+
+    .expertise-title {
+        font: {
+            size: 2rem;
+        }
+    }
+}

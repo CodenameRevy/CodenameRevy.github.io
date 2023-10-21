@@ -1,32 +1,23 @@
-.title {
-    color: var(--malachite);
-    font-family: 'Jetbrains Mono', monospace;
-    font-size: 2rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
+@mixin animate($animation, $duration, $method, $iterations) {
+    animation: $animation $duration $method $iterations;
 }
 
-.name-title {
-    color: var(--malachite);
-    font-family: 'Jetbrains Mono', monospace;
-    font-size: 5rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
 }
 
-.expertise-title {
-    color: var(--deep-green);
-    font-family: 'Jetbrains Mono', monospace;
-    font-size: 3rem;
-    margin-block-start: 0;
-    margin-block-end: 1rem;
+@include keyframes(blinkingCursor) {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-.matrix:hover {
-    animation: glitch 1.5s steps(1, end) infinite;
-}
-
-@keyframes glitch {
+@include keyframes(glitch) {
     0% {
         text-transform: none;
         text-decoration: none;
@@ -69,12 +60,8 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .name-title {
-        font-size: 3rem;
-    }
-
-    .expertise-title {
-        font-size: 1rem;
+.matrix {
+    &:hover {
+        @include animate(glitch, 1.5s, steps(1, end), infinite);
     }
 }

@@ -1,0 +1,42 @@
+@use 'sass:map';
+
+@use 'media';
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    place-self: center;
+    place-content: center;
+    width: 100%;
+
+    .container {
+        display: inherit;
+        width: 50%;
+        flex-direction: column;
+        place-content: center;
+        align-items: center;
+        margin: {
+            left: 0rem;
+            bottom: 0rem;
+        }
+        padding: {
+            top: 13.5rem;
+        }
+    }
+}
+
+@include media.media(map.get(media.$breakpoints, "small")) {
+    .footer {
+        flex-direction: column;
+
+        .container {
+            width: 100%;
+            padding: {
+                top: 0rem;
+            }
+            margin: {
+                top: 0rem;
+            }
+        }
+    }
+}

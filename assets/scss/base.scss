@@ -1,0 +1,53 @@
+@use 'sass:map';
+
+@use 'colors';
+@use 'fonts';
+@use 'navigation';
+@use 'articles';
+@use 'badges';
+@use 'cards';
+@use 'text';
+@use 'footer';
+@use 'media';
+
+:root {
+    font-family: fonts.$jetbrainsMono;
+    background-color: colors.$grayBlack;
+    color: colors.$malachite;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text: {
+        decoration: none;
+    }
+    color: colors.$deepGreen;
+    padding: {
+        left: 5px;
+        right: 5px;
+    }
+
+    &:hover {
+        color: colors.$grayBlack;
+        background-color: colors.$malachite;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    place-self: center;
+    place-content: center;
+}
+
+@include media.media(map.get(media.$breakpoints, "small")) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,91 @@
+@use 'sass:map';
+
+@use 'media';
+
+@use 'colors';
+@use 'animations';
+
+.navigation-bar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    place-self: center;
+    place-content: center;
+    align-items: center;
+    width: 100%;
+
+    .navigation-links {
+        display: flex;
+        list-style-type: none;
+        place-content: center;
+        align-items: center;
+        text-align: center;
+        padding-inline: {
+            start: 0;
+            end: 0;
+        }
+        margin-inline: {
+            start: 1rem;
+            end: 1rem;
+        }
+        background-color: colors.$grayBlack;
+
+        .navigation-link {
+            display: flex;
+            a {
+                color: colors.$malachite;
+                text: {
+                    transform: uppercase;
+                }
+                padding: {
+                    top: 1rem;
+                    right: 2rem;
+                    bottom: 1rem;
+                    left: 2rem;
+                }
+
+                &::after {
+                    display: inline-block;
+                    content: ' ';
+                    width: 8px;
+                    height: 2px;
+                    border: {
+                        top: 1px; right: 1px; bottom: 1px; right: 1px;
+                        style: solid;
+                        color: colors.$grayBlack;
+                    }
+                    background-color: colors.$grayBlack;
+                    opacity: 0;
+                    @include animations.animate(blinkingCursor, 0.5s, steps(1, end), infinite);
+                }
+            }
+
+            &.selected {
+                background-color: colors.$deepGreen;
+
+                &:hover {
+                    background-color: colors.$malachite;
+                }
+
+                a {
+                    color: colors.$grayBlack;
+                }
+            }
+
+            &:hover {
+                background-color: colors.$malachite;
+
+                a {
+                    color: colors.$grayBlack;
+                }
+            }
+        }
+    }
+}
+
+@include media.media(map.get(media.$breakpoints, "small")) {
+    .navigation-bar {
+        display: none;
+    }
+}

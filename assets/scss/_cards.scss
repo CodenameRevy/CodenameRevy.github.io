@@ -1,0 +1,96 @@
+@use 'sass:map';
+
+@use 'media';
+@use 'colors';
+
+.card {
+    &-social {
+        margin: {
+            left: 4rem; right: 4rem; top: 4rem; bottom: 4rem;
+        }
+        width: 33.3%;
+        place-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &-icon {
+        font: {
+            size: 15rem;
+        }
+    }
+
+    &-title {
+        font: {
+            size: 1rem;
+        }
+        margin: {
+            bottom: 25px;
+        }
+    }
+
+    &-button {
+        width: 100%;
+        border: {
+            top: 1px; right: 1px; bottom: 1px; left: 1px;
+            style: solid;
+            color: colors.$malachite;
+        }
+        color: colors.$malachite;
+        width: 100%;
+        padding: {
+            top: 15px; right: 75px; bottom: 15px; left: 75px;
+        }
+    }
+}
+
+@include media.media(map.get(media.$breakpoints, "small")) {
+    .card {
+        &-icon {
+            font: {
+                size: 4rem;
+            }
+        }
+        &-social {
+            width: 100%;
+        }
+        &-button {
+            padding: {
+                left: 75px;
+                right: 75px;
+            }
+        }
+    }
+}
+
+@include media.media(map.get(media.$breakpoints, "medium")) {
+    .card {
+        &-social {
+            margin: {
+                left: 2rem; right: 2rem; top: 2rem; bottom: 2rem;
+            }
+        }
+        &-icon {
+            font: {
+                size: 8rem;
+            }
+        }
+        &-button {
+            padding: {
+                left: 55px;
+                right: 55px;
+            }
+        }
+    }
+}
+
+@include media.media(map.get(media.$breakpoints, "large")) {
+    .card {
+        &-button {
+            padding: {
+                left: 15px;
+                right: 15px;
+            }
+        }
+    }
+}

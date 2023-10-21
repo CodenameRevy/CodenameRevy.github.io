@@ -1,0 +1,7 @@
+$breakpoints: (small: 768px, medium: 1124px, large: 1200px);
+
+@mixin media($maxSize) {
+    @media screen and (max-width: $maxSize) {
+        @content;
+    }
+}

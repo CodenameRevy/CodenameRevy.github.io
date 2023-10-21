@@ -1,0 +1,25 @@
+@use 'sass:map';
+
+@use 'media';
+@use 'colors';
+
+.badges {
+    color: colors.$deepGreen;
+    font: {
+        size: 2rem;
+    }
+
+    i {
+        width: 2.5%;
+
+        &:hover {
+            color: colors.$malachite;
+        }
+    }
+}
+
+@include media.media(map.get(media.$breakpoints, "small")) {
+    .badges {
+        text-wrap: balance;
+    }
+}
