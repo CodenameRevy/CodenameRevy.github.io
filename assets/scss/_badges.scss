@@ -31,5 +31,14 @@
     .badges {
         text-wrap: balance;
         text-align: center;
+
+        a {
+            display: block;
+            margin: {
+                top: 1rem;
+                bottom: 1rem;
+            };
+            font-size: 1rem;
+        }
     }
 }
