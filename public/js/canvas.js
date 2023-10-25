@@ -7,10 +7,10 @@ context.canvas.height = window.innerHeight;
 
 canvas.style.filter = 'url(#gaussian)';
 
-if (devicePixelRatio != 1.0) {
-    context.canvas.style.width = (context.canvas.width / devicePixelRatio) + "px";
-    context.canvas.style.height = (context.canvas.height / devicePixelRatio) + "px";
-}
+// if (devicePixelRatio != 1.0) {
+//     context.canvas.style.width = (context.canvas.width / devicePixelRatio) + "px";
+//     context.canvas.style.height = (context.canvas.height / devicePixelRatio) + "px";
+// }
 
 context.fillStyle = "#002F00";
 
