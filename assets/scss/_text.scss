@@ -2,6 +2,7 @@
 
 @use 'media';
 @use 'colors';
+@use 'animations';
 
 $marginBlock: ( start: 0, end: 0 );
 
@@ -14,6 +15,21 @@ $marginBlock: ( start: 0, end: 0 );
         start: map.get($marginBlock, "start");
         end: map.get($marginBlock, "end");
     };
+}
+
+.subtitle {
+    &:hover {
+        &::before {
+            opacity: 0;
+            content: '> ';
+            @include animations.animate(blinkingCursor, 1s, steps(1, end), infinite);
+        }
+        &::after {
+            opacity: 0;
+            content: ' <';
+            @include animations.animate(blinkingCursor, 1s, steps(1, end), infinite);
+        }
+    }
 }
 
 .name-title {
@@ -34,7 +50,7 @@ $marginBlock: ( start: 0, end: 0 );
     }
     margin-block: {
         start: map.get($marginBlock, "start");
-        end: map.get($marginBlock, "end");
+        end: 2rem;
     };
 }
 
