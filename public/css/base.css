@@ -170,6 +170,12 @@
   color: #008F08;
   font-size: 2rem;
 }
+.badges a {
+  font-size: 1.5rem;
+}
+.badges a i:hover {
+  color: inherit;
+}
 .badges i {
   width: 2.5%;
 }
@@ -180,6 +186,7 @@
 @media screen and (max-width: 768px) {
   .badges {
     text-wrap: balance;
+    text-align: center;
   }
 }
 .card-social {
@@ -255,6 +262,17 @@
   margin-block-end: 0;
 }
 
+.subtitle:hover::before {
+  opacity: 0;
+  content: "> ";
+  animation: blinkingCursor 1s steps(1, end) infinite;
+}
+.subtitle:hover::after {
+  opacity: 0;
+  content: " <";
+  animation: blinkingCursor 1s steps(1, end) infinite;
+}
+
 .name-title {
   color: #00FF41;
   font-size: 5rem;
@@ -266,7 +284,7 @@
   color: #008F08;
   font-size: 3rem;
   margin-block-start: 0;
-  margin-block-end: 0;
+  margin-block-end: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -315,6 +333,16 @@
 body {
   display: flex;
   flex-direction: column;
+}
+
+canvas {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
 }
 
 a {
