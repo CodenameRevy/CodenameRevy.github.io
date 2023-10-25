@@ -9,6 +9,15 @@
         size: 2rem;
     }
 
+    a {
+        font-size: 1.5rem;
+        i {
+            &:hover {
+                color: inherit;
+            }
+        }
+    }
+
     i {
         width: 2.5%;
 
@@ -21,5 +30,6 @@
 @include media.media(map.get(media.$breakpoints, "small")) {
     .badges {
         text-wrap: balance;
+        text-align: center;
     }
 }
