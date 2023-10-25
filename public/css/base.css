@@ -125,15 +125,15 @@
   }
 }
 .article {
+  scroll-margin-bottom: 25vh;
+  scroll-padding-top: -1rem;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   width: 80%;
   place-self: center;
   place-content: center;
   align-items: center;
-  margin-top: 8rem;
-  margin-bottom: 19.5rem;
-  padding-top: 8rem;
 }
 .article p {
   display: inline-block;
@@ -143,9 +143,12 @@
 }
 
 .container {
+  height: 100vh;
   margin-left: 8rem;
   margin-bottom: 8rem;
   padding-top: 25rem;
+  scroll-margin-top: 1vh;
+  scroll-padding-top: -1rem;
 }
 
 .contact-email, .contact-linkedin {
@@ -311,12 +314,13 @@
 .footer .container {
   display: inherit;
   width: 50%;
+  height: inherit;
   flex-direction: column;
   place-content: center;
   align-items: center;
   margin-left: 0rem;
   margin-bottom: 0rem;
-  padding-top: 13.5rem;
+  padding-top: 8rem;
 }
 
 @media screen and (max-width: 768px) {

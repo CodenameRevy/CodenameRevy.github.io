@@ -12,6 +12,7 @@
     .container {
         display: inherit;
         width: 50%;
+        height: inherit;
         flex-direction: column;
         place-content: center;
         align-items: center;
@@ -20,7 +21,7 @@
             bottom: 0rem;
         }
         padding: {
-            top: 13.5rem;
+            top: 8rem;
         }
     }
 }
