@@ -54,6 +54,17 @@ $marginBlock: ( start: 0, end: 0 );
     };
 }
 
+.title-links {
+    display: inline-block;
+    a {
+        display: inline-block;
+        margin: {
+            top: 0.5rem;
+            bottom: 0.5rem;
+        };
+    }
+}
+
 @include media.media(map.get(media.$breakpoints, "small")) {
     .name-title {
         font: {
