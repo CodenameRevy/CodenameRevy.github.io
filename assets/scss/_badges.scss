@@ -4,25 +4,41 @@
 @use 'colors';
 
 .badges {
-    color: colors.$deepGreen;
-    font: {
-        size: 2rem;
-    }
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0.5rem;
+        color: colors.$deepGreen;
+        font: {
+            size: 2rem;
+        }
 
-    a {
-        font-size: 1.5rem;
         i {
+
             &:hover {
-                color: inherit;
+                color: colors.$malachite;
             }
         }
-    }
-
-    i {
-        width: 2.5%;
+        .badge-tooltip {
+            background-color: colors.$grayBlack;
+            color: colors.$malachite;
+            text-align: center;
+            text-wrap: nowrap;
+            font-size: medium;
+            position: absolute;
+            min-width: 100px;
+            display: none;
+            bottom: 3.5rem;
+            border: 2px solid colors.$malachite;
+            padding: 10px;
+        }
 
         &:hover {
-            color: colors.$malachite;
+            .badge-tooltip {
+                display: block;
+            }
         }
     }
 }
@@ -39,6 +55,12 @@
                 bottom: 1rem;
             };
             font-size: 1rem;
+        }
+
+        .badge {
+            .badge-tooltip {
+                text-wrap: wrap;
+            }
         }
     }
 }
