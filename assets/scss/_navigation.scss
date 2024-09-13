@@ -10,13 +10,14 @@
     display: flex;
     flex-direction: row;
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
     place-self: center;
     place-content: center;
-    align-items: center;
     width: 100%;
+    background-color: colors.$grayBlack;
 
     .navigation-links {
+        height: 100%;
         display: flex;
         list-style-type: none;
         place-content: center;
@@ -27,9 +28,13 @@
             end: 0;
         }
         margin-inline: {
-            start: 1rem;
-            end: 1rem;
+            start: 0;
+            end: 0;
         }
+        margin-block: {
+            start: 0;
+            end: 0;
+        };
         background-color: colors.$grayBlack;
 
         .navigation-link {
