@@ -6,13 +6,13 @@
     <title>Marko Dujović - github.io</title>
 
     <link rel="stylesheet" type="text/css" href="css/base.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
     <canvas id="backgroundCanvas">
         <!--Gaussian blur filter-->
-        <svg xmlns:svg="http://www.w3.org/2000/svg">
+        <svg>
             <filter id="gaussian">
                 <feGaussianBlur id="blur" stdDeviation="8" />
             </filter>
@@ -30,6 +30,9 @@
                 <a onclick="scrollToAnchor('#skills')">/Skills</a>
             </li>
             <li class="navigation-link">
+                <a onclick="scrollToAnchor('#projects')">/Projects</a>
+            </li>
+            <li class="navigation-link">
                 <a onclick="scrollToAnchor('#socials')">/Socials</a>
             </li>
             <li class="navigation-link">
@@ -39,7 +42,7 @@
     </nav>
     <div class="container section" id="me">
         <h1 class="name-title matrix">Marko Dujović</h1>
-        <h2 class="expertise-title">Junior Software Engineer</h2>
+        <h2 class="expertise-title">Software Engineer</h2>
         <div class="title-links">
             <a href="https://www.linkedin.com/in/marko-dujovic/" target="_blank">LinkedIn <i class="devicon-linkedin-plain"></i></a><br>
             <a href="https://github.com/mdujovic17/" target="_blank">Github <i class="devicon-github-plain"></i></a><br>
@@ -60,12 +63,15 @@
         </p>
         <p>
             Graduated from the School of Electrical and Computer engineering in 2023 with the final thesis titled 
-            "Usage of modern frameworks in developing a business app for a medical facility", where I used and showcased 
-            Blazor, Flutter and .NET Core Web API frameworks.
+            "Applying modern frameworks for developing a business application for a medical facility", where I used 
+            and showcased Blazor, Flutter and .NET Core Web API frameworks.
+        </p>
+        <p>
+            Since 2022 I'm working at Clarivate as a Software Engineer.
         </p>
         <p>
             Aside from software developing, I'm also into amateur digital and film photography, microcontrollers such as 
-            Arduino, reading and board games.
+            Arduino, reading, puzzles and board games.
         </p>
     </div>
     <div class="article section" id="skills">
@@ -115,6 +121,10 @@
             <div class="badge">
                 <i class="devicon-dotnetcore-plain"></i>
                 <span class="badge-tooltip">.NET Core Web API</span>
+            </div>
+            <div class="badge">
+                <i class="devicon-blazor-original"></i>
+                <span class="badge-tooltip">Blazor</span>
             </div>
             <div class="badge">
                 <i class="devicon-nodejs-plain"></i>
@@ -178,7 +188,7 @@
             </div>
             <div class="badge">
                 <i class="devicon-jetbrains-plain"></i>
-                <span class="badge-tooltip">Jetbrains Suite</span>
+                <span class="badge-tooltip">JetBrains Suite</span>
             </div>
             <div class="badge">
                 <i class="devicon-visualstudio-plain"></i>
@@ -189,7 +199,7 @@
                 <span class="badge-tooltip">Visual Studio Code</span>
             </div>
             <div class="badge">
-                <i class="devicon-unity-original"></i>
+                <i class="devicon-unity-plain"></i>
                 <span class="badge-tooltip">Unity Game Engine</span>
             </div>
             <div class="badge">
@@ -211,6 +221,363 @@
             <div class="badge">
                 <i class="devicon-bash-plain"></i>
                 <span class="badge-tooltip">Shell Scripting</span>
+            </div>
+        </div>
+    </div>
+    <div class="article section" id="projects">
+        <h3 class="title">/Projects</h3>
+        <div class="projects">
+            <div class="project">
+                <div class="project-content">
+                    <h3 class="project-title">Medical Facility Business Applications</h3>
+                    <p class="project-description">
+                        Final thesis project. Demonstrates creating a Server-Client Architecture set of applications using different techologies. 
+                        Project consists of the Server Side Application which contains all the logic for data manipulation, user authentication, 
+                        API Endpoints and database communication, Client Web Interface and a client mobile Android Application which communicate 
+                        with the Server Application via the REST API calls. 
+                    </p>
+                    <p class="project-description">
+                        Full Name of the project: Applying modern frameworks for developing a business application for a medical facility
+                    </p>
+                    <div class="project-footer">
+                        <a class="project-link" href="https://github.com/NRT-8519" target="_blank">
+                            View Source <i class="devicon-github-original"></i>
+                        </a>
+                        <div class="project-tech">
+                            Technologies: 
+                            <div class="badges">
+                                <div class="badge">
+                                    <i class="devicon-dotnetcore-plain"></i>
+                                    <span class="badge-tooltip">.NET Core Web API</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-blazor-original"></i>
+                                    <span class="badge-tooltip">Blazor</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-flutter-plain"></i>
+                                    <span class="badge-tooltip">Flutter</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-csharp-plain"></i>
+                                    <span class="badge-tooltip">C#</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-dart-plain"></i>
+                                    <span class="badge-tooltip">Dart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h3 class="project-title">E-Mail Encryption Application</h3>
+                    <p class="project-description">
+                        JavaFX GUI E-Mail Client with the ability to send encrypted e-mails and recieve and decrypt those same emails. 
+                        Application can connect to GMail, Office 365 or Yahoo SMTP Services, which are used to send and recieve E-mails.
+                        Application can also read regular E-Mails via HTML viewer. E-Mails can be encrypted and decrypted with the following
+                        algorithms: MD5, SHA-1, SHA-256 and SHA-512.
+                    </p>
+                    <p class="project-description">
+                        Full Name of the project: CryptoMail
+                    </p>
+                    <div class="project-footer">
+                        <a class="project-link" href="https://github.com/mdujovic17/CryptoMail" target="_blank">
+                            View Source <i class="devicon-github-original"></i>
+                        </a>
+                        <div class="project-tech">
+                            Technologies: 
+                            <div class="badges">
+                                <div class="badge">
+                                    <i class="devicon-java-plain-wordmark"></i>
+                                    <span class="badge-tooltip">Java</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-java-plain"></i>
+                                    <span class="badge-tooltip">JavaFX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h3 class="project-title">Fiscalisation Services</h3>
+                    <p class="project-description">
+                        Set of applications that simulate a fiscalisation service. Apps demonstrate usage of 
+                        REST APIs for manipulating Advert entries between Client Application and Server
+                    </p>
+                    <p class="project-description">
+                        Full Name of the project: ISTProjekatV2, ISTProjekat2V2
+                    </p>
+                    <div class="project-footer">
+                        <div class="row">
+                            <a class="project-link" href="https://github.com/mdujovic17/ISTProjekatV2" target="_blank">
+                                1st <i class="devicon-github-original"></i>
+                            </a>
+                            <a class="project-link" href="https://github.com/mdujovic17/ISTProjekat2V2" target="_blank">
+                                2nd <i class="devicon-github-original"></i>
+                            </a>
+                        </div>
+                        <div class="project-tech">
+                            Technologies: 
+                            <div class="badges">
+                                <div class="badge">
+                                    <i class="devicon-dotnetcore-plain"></i>
+                                    <span class="badge-tooltip">.NET Core Web API</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-csharp-plain"></i>
+                                    <span class="badge-tooltip">C#</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-javascript-plain"></i>
+                                    <span class="badge-tooltip">JavaScript</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-typescript-plain"></i>
+                                    <span class="badge-tooltip">TypeScript</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-nodejs-plain"></i>
+                                    <span class="badge-tooltip">NodeJS</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-xml-plain"></i>
+                                    <span class="badge-tooltip">XML</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h3 class="project-title">Theather Ticketing Application</h3>
+                    <p class="project-description">
+                        .NET Framework application that simulates a theater. 
+                        Application supports two types of user roles, Client and Administrator.
+                        Depending on the role, application shows corresponding features in the application. 
+                        Application data is stored in JSON file format.
+                    </p>
+                    <p class="project-description">
+                        Full Name of the project: TVPProjekat
+                    </p>
+                    <div class="project-footer">
+                        <a class="project-link" href="https://github.com/mdujovic17/TVPProjekat" target="_blank">
+                            View Source <i class="devicon-github-original"></i>
+                        </a>
+                        <div class="project-tech">
+                            Technologies: 
+                            <div class="badges">
+                                <div class="badge">
+                                    <i class="devicon-csharp-plain"></i>
+                                    <span class="badge-tooltip">C#</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-json-plain"></i>
+                                    <span class="badge-tooltip">JSON</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h3 class="project-title">Store Simulation</h3>
+                    <p class="project-description">
+                        .NET Framework application that simulates the works of a store. Application has the ability to
+                        view the sales statistics, manage products and receipts, and manage users and data in the database.
+                    </p>
+                    <p class="project-description">
+                        Full Name of the project: TVPProjekat2
+                    </p>
+                    <div class="project-footer">
+                        <a class="project-link" href="https://github.com/mdujovic17/TVPProjekat2" target="_blank">
+                            View Source <i class="devicon-github-original"></i>
+                        </a>
+                        <div class="project-tech">
+                            Technologies: 
+                            <div class="badges">
+                                <div class="badge">
+                                    <i class="devicon-csharp-plain"></i>
+                                    <span class="badge-tooltip">C#</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-dot-net-plain"></i>
+
+                                    <span class="badge-tooltip">.NET Framework</span>
+                                </div>
+
+                                <div class="badge">
+                                    <i class="devicon-azuresqldatabase-plain"></i>
+                                    <span class="badge-tooltip">Access Database</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h3 class="project-title">Remote data access and management Android Application</h3>
+                    <p class="project-description">
+                        Application that connects to a remote REST service to manage and read data from that remote service.
+                        Background service is a pre-hosted Northwind API Example.
+                    </p>
+                    <p class="project-description">
+                        Full Name of the project: PMUProjekat
+                    </p>
+                    <div class="project-footer">
+                        <a class="project-link" href="https://github.com/mdujovic17/TVPProjekat2" target="_blank">
+                            View Source <i class="devicon-github-original"></i>
+                        </a>
+                        <div class="project-tech">
+                            Technologies: 
+                            <div class="badges">
+                                <div class="badge">
+                                    <i class="devicon-kotlin-plain"></i>
+                                    <span class="badge-tooltip">Kotlin</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-android-plain"></i>
+
+                                    <span class="badge-tooltip">Android</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h3 class="project-title">CLI Library Management System</h3>
+                    <p class="project-description">
+                        Java application that simulates a library. Application was designed in a way that the data is
+                        stored in plain text via Serialisation and Deserialisation. Application supports different user
+                        permissions and a special first time init system. Application was created as a final project for
+                        the Object Oriented Projecting course.
+                    </p>
+                    <p class="project-description">
+                        Full Name of the project: PMUProjekat
+                    </p>
+                    <div class="project-footer">
+                        <a class="project-link" href="https://github.com/mdujovic17/OOPProjekat" target="_blank">
+                            View Source <i class="devicon-github-original"></i>
+                        </a>
+                        <div class="project-tech">
+                            Technologies: 
+                            <div class="badges">
+                                <div class="badge">
+                                    <i class="devicon-java-plain"></i>
+                                    <span class="badge-tooltip">Java</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h3 class="project-title">Caesar Cipher</h3>
+                    <p class="project-description">
+                        Console application for encrypting and decrypting text using Ceasar's Cipher. 
+                        Application supports encryption and decryption with a variable number of alphabet rotations.
+                    </p>
+                    <p class="project-description">
+                        Full Name of the project: CaesarCipherCPP
+                    </p>
+                    <div class="project-footer">
+                        <a class="project-link" href="https://github.com/mdujovic17/CaesarCipherCPP" target="_blank">
+                            View Source <i class="devicon-github-original"></i>
+                        </a>
+                        <div class="project-tech">
+                            Technologies: 
+                            <div class="badges">
+                                <div class="badge">
+                                    <i class="devicon-cplusplus-plain"></i>
+                                    <span class="badge-tooltip">C++</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h3 class="project-title">FPS Game</h3>
+                    <p class="project-description">
+                        Wave-Style First Person Shooter Video game made in Unity Engine. Features different weapons, maps and enemies, Main menu and Pause menu and
+                        Scoreboard.
+                        Game uses a points based system, where the player can utilise some of the points to buy ammo, health packs or armor packs, which in turn
+                        reduce the overall earned points
+                    </p>
+                    <p class="project-description">
+                        Full Name of the project: PRIProjekatFPSGame
+                    </p>
+                    <div class="project-footer">
+                        <a class="project-link" href="https://github.com/mdujovic17/PRIProjekatFPSGame" target="_blank">
+                            View Source <i class="devicon-github-original"></i>
+                        </a>
+                        <div class="project-tech">
+                            Technologies: 
+                            <div class="badges">
+                                <div class="badge">
+                                    <i class="devicon-csharp-plain"></i>
+                                    <span class="badge-tooltip">C#</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-unity-plain"></i>
+                                    <span class="badge-tooltip">Unity Game Engine</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h3 class="project-title">Minecraft Mods</h3>
+                    <p class="project-description">
+                        Various mods for Minecraft. Utilising publicly supported Mod Loader Frameworks such as 
+                        Forge, NeoForge, Quilt or Fabric.
+                    </p>
+                    <div class="project-footer">
+                        <a class="project-link" href="https://github.com/mdujovic17" target="_blank">
+                            Find on <i class="devicon-github-original"></i>
+                        </a>
+                        <div class="project-tech">
+                            Technologies: 
+                            <div class="badges">
+                                <div class="badge">
+                                    <i class="devicon-java-plain"></i>
+                                    <span class="badge-tooltip">Java</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-json-plain"></i>
+                                    <span class="badge-tooltip">JSON</span>
+                                </div>
+                                <div class="badge">
+                                    <i class="devicon-gradle-plain"></i>
+                                    <span class="badge-tooltip">Gradle</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -257,11 +624,11 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <p><a href="https://github.com/mdujovic17/mdujovic17.github.io/" target="_blank">Github repository <i class="bi bi-github"></i></a></p>
+            <p><a href="https://github.com/mdujovic17/mdujovic17.github.io/" target="_blank">GitHub repository <i class="bi bi-github"></i></a></p>
         </div>
         <div class="container">
             <p>
-                <i class="bi bi-c-circle"></i> 2023 Marko Dujović
+                <i class="bi bi-c-circle"></i> Marko Dujović
             </p>
             <p class="matrix">
                 Matrix themed portfolio
