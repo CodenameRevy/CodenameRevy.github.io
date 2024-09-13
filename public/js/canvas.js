@@ -1,6 +1,6 @@
-var canvas = document.getElementById("backgroundCanvas");
-var context = canvas.getContext("2d");
-var objects = [];
+const canvas = document.getElementById("backgroundCanvas");
+const context = canvas.getContext("2d");
+const objects = [];
 
 context.canvas.width = window.innerWidth;
 context.canvas.height = window.innerHeight;
@@ -15,15 +15,14 @@ canvas.style.filter = 'url(#gaussian)';
 context.fillStyle = "#002F00";
 
 for (i = 0; i < 45; i++) {
-    var objHeight = Math.random() * (350 - 50) + 50;
-    var obj = {
+    const objHeight = Math.random() * (350 - 50) + 50;
+    objects[i] = {
         x: ((Math.random() * (window.innerWidth - 25) + 25)),
         y: (Math.random() * (window.innerHeight)) - objHeight,
         width: 10,
         height: objHeight,
         speed: Math.random() + 1
-    }
-    objects[i] = obj;
+    };
 }
 
 const redraw = () => {
