@@ -1,0 +1,99 @@
+@use 'colors';
+@use 'animations';
+
+.projects {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 3rem;
+    width: 100%;
+}
+
+.project {
+    display: flex; 
+    padding: {
+        left: 15px;
+        right: 15px;
+    };
+    border: 1px solid colors.$malachite;
+    &-image {
+        width: 50%;
+    }
+
+    &-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &-footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    &-tech {
+        align-content: center;
+        justify-content: center;
+    }
+    
+    &-title {
+        width: 100%;
+        font: {
+            weight: bold;
+            size: 1.5rem;
+        }
+
+        margin: {
+            bottom: 1rem; 
+        }
+    }
+    p {
+        width: 100%;
+        text-align: start;
+        padding-right: 15px;
+    }
+
+    &-link {
+        border: {
+            top: 1px; right: 1px; bottom: 1px; left: 1px;
+            style: solid;
+            color: colors.$darkGreen;
+        }
+
+        color: colors.$grayBlack;
+        background-color: colors.$deepGreen;
+        padding: {
+            top: 15px; right: 15px; bottom: 15px; left: 15px;
+        }  
+        margin: 15px;
+        text-wrap: nowrap;
+    }
+
+    &:hover {
+        .project-title {
+            background-color: colors.$malachite; 
+            color: colors.$grayBlack;
+
+            &:hover {
+                &::after {
+                    display: inline-block; 
+                    content: ''; 
+                    width: 12px;
+                    height: 2px;
+                    border: {
+                        top: 1px; right: 1px; bottom: 1px; right: 1px;
+                        style: solid;
+                        color: colors.$grayBlack;
+                    }
+                    background-color: colors.$grayBlack; 
+                    opacity: 0;
+                    @include animations.animate(blinkingCursor, 0.5s, steps(1, end), infinite);
+                } 
+            }
+        }
+    }
+}

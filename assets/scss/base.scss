@@ -9,6 +9,7 @@
 @use 'text';
 @use 'footer';
 @use 'media';
+@use 'project';
 
 :root {
     font-family: fonts.$jetbrainsMono;
